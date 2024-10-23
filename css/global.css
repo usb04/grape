@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+html, body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+* {
+    text-transform: lowercase;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+body {
+	color: #333;
+	margin: 0;
+	box-sizing: border-box;
+	display: flex;
+}
+
+menu {
+    height: calc(100vh - 2em);
+    width: 240px;
+
+    padding-top: 2em;
+
+    background: #fff;
+    box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.25);
+
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    z-index: 9999;
+}
+
+@media only screen and (max-width: 944px){
+    menu {
+        width: fit-content;
+    }
+}
+
+content {
+    flex: 1;
+    width: 100%;
+
+    height: calc(100% - 5em);
+
+    background-color: #f9f9f9;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    flex-shrink: unset;
+
+    padding-top: 5em;
+
+    overflow-y: scroll;
+}
+
+.reactions {
+    display: none !important;
+}
+
+
+/* dark mode */
+@media only screen and (prefers-color-scheme: dark) {
+    menu {
+        background-color: #252525;
+        box-shadow: 1px 0px 0px rgb(54, 54, 54);
+    }
+
+    .newP {
+        outline: 1px solid #ffffff22 !important;
+    }
+    
+    .post-top {
+        border-bottom: 1px solid #ffffff25 !important;
+    }
+
+    .logo {
+        filter: invert(1) !important;
+    }
+
+    *:not(.login) {
+        color: #fff !important;
+    }
+
+    .login * {
+        color: #000 !important;
+    }
+
+    .login button {
+        color: inherit !important;
+    }
+
+    .login .logo {
+        filter: invert(0) !important;
+    }
+
+    #hashtag {
+        color: #ad00ff !important;
+    }
+
+    content {
+        background-color: #151515;
+        color: #fff;
+    }
+
+    input, textarea {
+        background: none;
+    }
+
+    .tab:hover {
+        background-color: #ffffff10 !important;
+    }
+
+    .p_button {
+        color: #ad00ff !important;
+    }
+
+    .p_button :active {
+        color: #ffffffff !important;
+    }
+
+    .search {
+        background-color: #252525 !important;
+    }
+
+    .post {
+        background-color: #252525 !important;
+    }
+
+    .reaction:hover {
+        background-color: #333 !important;
+    }
+
+    .edit {
+        outline: 1px solid #ffffff22 !important;
+    }
+
+    .edit form input {
+        border: 1px solid #ffffff22 !important;
+    }
+}
+
+.pic2, .pic {
+    object-fit: cover !important;
+    object-position: center !important;
+}
+
+.verified {
+    margin-left: 5px !important;
+    transform: translateY(2.5px);
+}
+
+.edit {
+    padding: 15px 15px;
+    outline: 1px solid #00000022;
+    border-radius: 15px;
+}
+
+.edit h1 {
+    font-size: 24px;
+    margin-bottom: 0px;
+}
+
+.edit small {
+    font-size: 16px;
+    margin-bottom: 10px !important;
+    opacity: 50%;
+    font-weight: 500;
+}
+
+.edit * {
+    margin: 0;
+}
+
+.edit form {
+    margin-top: 20px;
+}
+
+.edit form input {
+    width: 400px !important;
+    padding: 8px 12px;
+    font-size: 16px;
+    margin-bottom: 5px;
+    border: 1px solid #15151555;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.edit form input:focus {
+    outline: 3px solid #ad00ff55;
+    border: 1px solid #ad00ff;
+}
+
+.edit form label {
+    margin: 1em 1em;
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 50%;
+}
+
+.endA {
+    margin-bottom: 10px !important;
+}
+
+.endB {
+    margin-top: 5px;
+}
+
+.edit form button {
+    margin-top: 10px;
+    padding: 8px 24px;
+    background-color: #ad00ff;
+    font-weight: 600;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+}

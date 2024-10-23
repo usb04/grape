@@ -1,0 +1,158 @@
+body {
+    background-color: #f0f0f0;
+    background-image: url('bkg.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+* {
+    margin: 0;
+    font-weight: 600;
+}
+
+.login {
+    background-color: #fff;
+    padding: 20px;
+    width: 400px;
+    height: 550px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 2px #00000055;
+
+    margin-top: -50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+
+    opacity: 0%;
+    animation: login 0.3s 0.1s forwards cubic-bezier(0,0,0,1)
+}
+
+@media only screen and (max-width: 1150px), screen and (max-height: 750px){
+    .login {
+        width: calc(100vw - 40px);
+        height: calc(100vh - 40px);
+        margin-top: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+}
+
+@media only screen and (max-height: 490px){
+    h1, p, hr {
+        display: none;
+    }
+}
+
+@media only screen and (max-height: 335px){
+    .logo {
+        display: none;
+    }
+}
+
+@keyframes login {
+    from {
+        transform: translateY(30px);
+        opacity: 0%;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+}
+
+.logo {
+    height: 48px;
+    margin-top: 20px;
+    pointer-events: none;
+}
+
+h1 {
+    margin-top: 10px;
+    user-select: none;
+}
+
+p {
+    text-align: center;
+    user-select: none;
+    font-weight: 500;
+}
+
+hr {
+    border-color: #00000033;
+    width: 100%;
+    margin: 20px 0px;
+}
+
+form {
+    width: 100%;
+}
+
+form input {
+    width: calc(100% - 24px);
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 7px;
+    border: none;
+    border: 1px solid #00000044;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+form label {
+    margin-left: 10px;
+    opacity: 50%;
+    font-size: 14px;
+}
+
+form input:focus {
+    outline: 3px solid #AD00FF55;
+    border: 1px solid #AD00FF;
+}
+
+button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background: none;
+    border: none;
+    outline: 1px solid #AD00FF;
+    border-radius: 5px;
+    color: #AD00FF;
+    font-weight: 700;
+}
+
+.prim {
+    background-color: #AD00FF;
+    color: #fff;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.sec {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-weight: 400;
+    color: #AD00FF !important;
+    outline: 1px solid #AD00FF !important;
+}
+
+button:hover {
+    background-color: #AD00FF22;
+    cursor: pointer;
+}
+
+.prim:hover {
+    background-color: #AD00FF;
+}
